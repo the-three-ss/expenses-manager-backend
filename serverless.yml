@@ -6,12 +6,13 @@ provider:
   region: eu-west-2
 
 functions:
-  tasks:
+  expenses:
     handler: expenses.handler
     environment:
       DB_HOST: ${opt:DB_HOST}
       DB_USER: ${opt:DB_USER}
       DB_PASSWORD: ${opt:DB_PASSWORD}
+      DB_NAME: ${opt:DB_NAME}
     events:
       - http:
           path: expenses
